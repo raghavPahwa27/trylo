@@ -43,6 +43,76 @@
   --font-sans: "Inter", sans-serif;
   --font-mono: "JetBrains Mono", monospace;
 }
+/* Screen Preview */
+.print-wrapper{
+  min-height:100vh;
+  background:#e5e7eb;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:20px;
+}
+
+.poster-wrapper {
+  /* Calculate the exact scale ratio needed to fit the viewport, accounting for the 40px total padding */
+  --scale: min( calc((100vw - 40px) / 1684), calc((100vh - 40px) / 1191) );
+  width: calc(1684px * var(--scale));
+  height: calc(1191px * var(--scale));
+  position: relative;
+}
+
+.poster-content {
+  transform: scale(var(--scale));
+  transform-origin: top left;
+}
+
+/* Print */
+@page{
+  size:A3 landscape;
+  margin:0;
+}
+
+@media print{
+  html,body{
+    margin:0 !important;
+    padding:0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    overflow: hidden !important;
+    -webkit-print-color-adjust:exact;
+    print-color-adjust:exact;
+  }
+
+  .print-wrapper{
+    padding:0 !important;
+    margin:0 !important;
+    background:white !important;
+    display:block !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    min-height: auto !important;
+    overflow: hidden !important;
+  }
+
+  .poster-wrapper {
+    width: 100vw !important;
+    height: 100vh !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    page-break-inside: avoid;
+  }
+
+  .poster-content {
+    width: 100vw !important;
+    height: 100vh !important;
+    transform: none !important;
+    zoom: 1 !important;
+    position: relative !important;
+  }
+}
 
 @layer base {
   * {

@@ -235,15 +235,15 @@ export const BMC_DATA: BMCSection[] = [
     table: {
       headers: ['Costs', 'Year 1', 'Year 2', 'Year 3'],
       rows: [
-        { label: 'Office rent (Fixed)', values: ['1,00,000', '5,00,000', '10,00,000'] },
-        { label: 'Talent (Fixed)', values: ['12,00,000', '50,00,000', '1,20,00,000'] },
-        { label: 'App Dev. (Fixed)', values: ['8,00,000', '15,00,000', '40,00,000'] },
-        { label: 'Marketing (Variable)', values: ['3,00,000', '20,00,000', '50,00,000'] },
-        { label: 'Cloud & AI (Variable)', values: ['5,00,000', '25,00,000', '75,00,000'] },
+        { label: 'AI R&D (Fixed)', values: ['10,00,000', '18,00,000', '28,00,000'] },
+        { label: 'Platform Team (Fixed)', values: ['18,00,000', '32,00,000', '70,00,000'] },
+        { label: 'Cloud Infra (Variable)', values: ['8,00,000', '6,00,000', '40,00,000'] },
+        { label: 'Marketing(Variable)', values: ['18,00,000', '42,00,000', '95,00,000'] },
+        { label: 'Ops &Compliance(Fixed)', values: ['6,00,000', '12,00,000', '27,00,000'] },
       ],
       totalsRow: {
         label: 'Total',
-        values: ['29,00,000', '1,15,00,000', '2,95,00,000']
+        values: ['60,00,000', '1,20,00,000', '2,60,00,000']
       }
     },
     footer: 'Timeline clearly tracks costs from MVP (Year 1) to scaling (Year 3).'
@@ -255,15 +255,15 @@ export const BMC_DATA: BMCSection[] = [
     table: {
       headers: ['Year', 'Year 1', 'Year 2', 'Year 3'],
       rows: [
-        { label: 'B2B Licensing', values: ['5,00,000', '30,00,000', '1,00,00,000'] },
-        { label: 'Subscriptions', values: ['2,00,000', '15,00,000', '50,00,000'] },
-        { label: 'Commissions', values: ['1,00,000', '10,00,000', '40,00,000'] },
-        { label: 'API Usage', values: ['0', '20,00,000', '80,00,000'] },
-        { label: 'Sponsored Ads', values: ['0', '5,00,000', '30,00,000'] },
+        { label: 'B2B Licensing', values: ['15,00,000', '45,00,000', '1,30,00,000'] },
+        { label: 'Try-On Subscriptions', values: ['8,00,000', '24,00,000', '70,00,000'] },
+        { label: 'Commissions', values: ['5,00,000', '15,00,000', '30,00,000'] },
+        { label: 'API Usage', values: ['5,00,000', '20,00,000', '75,00,000'] },
+        { label: 'Sponsored Ads', values: ['2,00,000', '6,00,000', '15,00,000'] },
       ],
       totalsRow: {
         label: 'Net Revenue',
-        values: ['8,00,000', '80,00,000', '3,00,00,000']
+        values: ['35,00,000', '1,10,00,000', '3,20,00,000']
       }
     },
     footer: 'Expected Break-even Period: 14 Months based on projected API scaling.'

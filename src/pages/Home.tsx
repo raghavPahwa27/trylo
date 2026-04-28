@@ -13,8 +13,8 @@ function BMCCard({
   return <div className={`relative border-0 p-3 flex flex-col gap-2 h-full bg-white ${className}`}>
       {/* Section title */}
       <div className="flex items-center gap-1.5 border-b border-black pb-2 mb-0.5">
-        <span className="text-base grayscale">{section.emoji}</span>
-        <h3 className="text-[13px] font-black uppercase tracking-tight text-black leading-none">
+        <span className="text-sm grayscale">{section.emoji}</span>
+        <h3 className="text-xs font-black uppercase tracking-tight text-black leading-none">
           {section.title}
         </h3>
       </div>
@@ -24,12 +24,12 @@ function BMCCard({
         <div className="flex flex-col gap-2 flex-1">
           {section.groups.map((group, gi) => <div key={gi}>
               {/* Group sub-label */}
-              {group.groupLabel && <p className="text-[12px] font-black uppercase tracking-widest text-black mb-1 underline underline-offset-2">
+              {group.groupLabel && <p className="text-[11px] font-black uppercase tracking-widest text-black mb-1 underline underline-offset-2">
                   {group.groupLabel}:
                 </p>}
               <ul className="space-y-1">
-                {group.items.map((item, ii) => <li key={ii} className="flex items-start gap-1.5 text-[12px] text-black leading-tight font-medium">
-                    <span className="mt-[6px] shrink-0 w-1 h-1 bg-black flex-shrink-0" />
+                {group.items.map((item, ii) => <li key={ii} className="flex items-start gap-1.5 text-[11px] text-black leading-tight font-medium">
+                    <span className="mt-[5px] shrink-0 w-1 h-1 bg-black flex-shrink-0" />
                     <span className="xl:text-xs">{item}</span>
                   </li>)}
               </ul>
@@ -40,7 +40,7 @@ function BMCCard({
       {/* Table */}
       {section.table && (
         <div className="w-full mt-1 flex-1 overflow-x-auto">
-          <table className="w-full text-[11px] xl:text-xs border-collapse border border-black text-left">
+          <table className="w-full text-[10px] xl:text-[11px] border-collapse border border-black text-left">
             <thead>
               <tr className="bg-black text-white">
                 {section.table.headers.map((h, i) => (
@@ -71,7 +71,7 @@ function BMCCard({
       )}
 
       {/* Optional footer note */}
-      {section.footer && <p className="mt-auto pt-2 border-t border-black text-[11px] font-black text-black tracking-tight">
+      {section.footer && <p className="mt-auto pt-2 border-t border-black text-[10px] font-black text-black tracking-tight">
           {section.footer}
         </p>}
     </div>;
